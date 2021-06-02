@@ -50,10 +50,21 @@ export default class WeatherDetailScreen extends React.Component {
     }
 
     let celsius = this.state.main.temp - 273.15;
+    let feelCelsius = this.state.main.feels_like - 273.15;
+    let humidity = this.state.main.humidity;
+    let weather = this.state.weather.main;
 
     return (
       <View style={styles.container}>
-      <Text>온도: {celsius.toFixed(1)}</Text>
+      <Text>현재온도 : {celsius.toFixed(1)}</Text>
+      <Text>체감온도 : {feelCelsius.toFixed(1)}</Text>
+      <Text>습도 : {humidity.toFixed(1)}</Text>
+      <Text>날씨 : {this.state.weather[0].main}</Text>
+      <Text>상세날씨설명 : {this.state.weather[0].description}</Text>
+      <Text>바람 : {this.state.wind.speed}</Text>
+      <Text>나라 : {this.state.sys.country}</Text>
+      <Text>도시이름 : {this.state.name}</Text>
+      <Text>구름 : {this.state.clouds.all}</Text>
       </View>
     );
   }
