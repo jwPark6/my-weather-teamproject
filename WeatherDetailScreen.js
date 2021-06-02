@@ -56,15 +56,15 @@ export default class WeatherDetailScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-      <Text>현재온도 : {celsius.toFixed(1)}</Text>
-      <Text>체감온도 : {feelCelsius.toFixed(1)}</Text>
-      <Text>습도 : {humidity.toFixed(1)}</Text>
-      <Text>날씨 : {this.state.weather[0].main}</Text>
-      <Text>상세날씨설명 : {this.state.weather[0].description}</Text>
-      <Text>바람 : {this.state.wind.speed}</Text>
-      <Text>나라 : {this.state.sys.country}</Text>
-      <Text>도시이름 : {this.state.name}</Text>
-      <Text>구름 : {this.state.clouds.all}</Text>
+      <Text style={styles.h}>City Name : {this.state.name}</Text>
+      <Text style={styles.a}>현재온도 : {celsius.toFixed(1)}</Text>
+      <Text style={styles.b}>체감온도 : {feelCelsius.toFixed(1)}</Text>
+      <Text style={styles.c}>습도 : {humidity.toFixed(1)}</Text>
+      <Text style={styles.d}>날씨 : {this.state.weather[0].main}</Text>
+      <Text style={styles.e}>상세날씨설명 : {this.state.weather[0].description}</Text>
+      <Text style={styles.f}>바람 : {this.state.wind.speed}</Text>
+      <Text style={styles.g}>나라 : {this.state.sys.country}</Text>
+      <Text style={styles.i}>구름 : {this.state.clouds.all}</Text>
       </View>
     );
   }
@@ -74,5 +74,51 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  a:{
+    color: 'skyblue',
+    fontSize: 30,
+    padding: 20,
+  },
+  b:{
+    color: '#8CD161',
+    fontSize: 30,
+    padding: 20,
+  },
+  c:{
+    color: '#6AD5E6',
+    fontSize: 30,
+    padding: 20,
+  },
+  d:{
+    color: '#586CEF',
+    fontSize: 30,
+    padding: 20,
+  },
+  e:{
+    color: '#FDCA8C',
+    fontSize: 30,
+    padding: 20,
+  },
+  f:{
+    color: '#E39794',
+    fontSize: 30,
+    padding: 20,
+  },
+  g:{
+    color: '#72E065',
+    fontSize: 30,
+    padding: 20,
+  },
+  h:{
+    color: '#F17BE3',
+    fontSize: 30,
+    padding: 20,
+    fontFamily: 'fantasy',
+  },
+  i:{
+    color: '#54545A',
+    fontSize: 30,
+    padding: 20,
   },
 });
